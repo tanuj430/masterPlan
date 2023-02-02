@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item  android:id="@+id/st_profile"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="BUS DETAILS"></item>
+
+        <item  android:id="@+id/timetable"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="TIMETABLE"></item>
+
+        <item  android:id="@+id/attendance"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="ATTENDANCE"></item>
+
+        <item  android:id="@+id/result"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="RESULT"></item>
+
+        <item  android:id="@+id/joinclub"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="JOIN CLUB"></item>
+
+        <item  android:id="@+id/library"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="LIBRARY"></item>
+
+        <item  android:id="@+id/myheirarchy"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="MY HIERARCHY"></item>
+
+<item  android:id="@+id/feedback"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="FEEDBACK"></item>
+
+<item  android:id="@+id/calender"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="CALENDER"></item>
+
+<item  android:id="@+id/notification"
+            android:left="-2dp"
+            android:top="-2dp"
+            android:right="-2dp"
+            android:icon="@drawable/ic_bus"
+            android:title="NOTIFICATION"></item>
+
+
+        </menu>

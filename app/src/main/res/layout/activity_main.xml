@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f8f7fc"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+   <com.google.android.material.tabs.TabLayout
+       android:id="@+id/tab_layout"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       app:tabMode="scrollable"
+       app:tabGravity="fill"
+      android:scrollbars="none"
+
+
+       >
+
+
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Bus Details"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="TimeTable"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="ATTENDANCE"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="RESULT"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="JOIN CLUB"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="MY HIERARCHY"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="FEEDBACK"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="ACADEMIC CALENDAR"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+       <com.google.android.material.tabs.TabItem
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="NOTIFICATIO"
+           android:icon="@drawable/ic_bus"></com.google.android.material.tabs.TabItem>
+   </com.google.android.material.tabs.TabLayout>
+
+
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/naac_banner"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        />
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/rectangle_small"
+        android:elevation="3dp"
+        android:layout_margin="15dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_dashboard"
+            >
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_profilepic_foreground"
+                tools:ignore="ImageContrastCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/profile_pic"
+            android:id="@+id/student_name"
+            android:textSize="20sp"
+            android:text="Pawan Singh"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/profile_pic"
+                android:id="@+id/semester_name"
+                android:paddingTop="3dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+                android:layout_below="@+id/student_name"
+                android:text="BCA ( V Sem )"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/semester_name"
+                android:id="@+id/registered"
+                android:paddingTop="29dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:text="- Registered"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/profile_dashboard">
+
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart_one"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:padding="8dp"
+                app:egInnerPaddingColor="@color/white"
+                app:egLegendTextSize="18sp"
+
+                />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_long"
+        android:elevation="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rel_timetable"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todays's Timetable"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/timetable"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="150dp"
+                android:layout_toEndOf="@+id/timetable"
+                android:src="@drawable/ic_download_for_offline_24"
+                tools:ignore="ImageContrastCheck" />
+        </RelativeLayout>
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sub_rectangle"
+            android:elevation="3dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:layout_below="@+id/rel_timetable"
+            >
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingStart="5dp"
+               android:layout_margin="5dp"
+               >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Lecture- 1"
+                   android:textStyle="bold"
+                   android:textSize="20sp"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="(10:20 AM- 11:10)"
+                   android:layout_alignParentEnd="true"
+                   android:textStyle="bold"
+                   android:layout_marginEnd="11dp"
+                   android:textSize="20sp"
+                   />
+
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="BMAS 0153/LEC/AB-X/Room-409/Offline"
+                   android:textSize="16.5sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/lecture_grey"
+                   android:layout_marginTop="32dp"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Optimization Methods"
+                   android:textSize="17sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/lecture_grey"
+                   android:layout_marginTop="58dp"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Faculty :Sanjeev Gupta"
+                   android:textSize="18sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/grey_navyblue"
+                   android:layout_marginTop="87dp"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Status :Present"
+                   android:textSize="18sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/grey_navyblue"
+                   android:layout_marginTop="109dp"
+                   />
+
+           </RelativeLayout>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sub_rectangle"
+        android:elevation="5dp"
+        android:layout_below="@+id/rel_timetable"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecture- 2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:text="(11:10 AM- 12:00)"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="PVRH 0001/LEC/AB-X/Room-408/Offline"
+                android:textColor="@color/lecture_grey"
+                android:textSize="16.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                android:text="Verbal Aptitude"
+                android:textColor="@color/lecture_grey"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="87dp"
+                android:text="Faculty :Quazi Ziauddin"
+                android:textColor="@color/grey_navyblue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="109dp"
+                android:text="Status :Aditya Gupta"
+                android:textColor="@color/grey_navyblue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sub_rectangle"
+        android:elevation="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/rel_timetable"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:layout_margin="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecture- 4"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(12:50 AM- 01:50)"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:layout_marginEnd="11dp"
+                android:textSize="20sp"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BCAC 0807/LEC/AB-X/Room-336/Offline"
+                android:textSize="16.5sp"
+                android:textStyle="bold"
+                android:textColor="@color/lecture_grey"
+                android:layout_marginTop="32dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Programming In Java Lab"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/lecture_grey"
+                android:layout_marginTop="58dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faculty :Aditya Gupta"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_navyblue"
+                android:layout_marginTop="87dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :Present"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_navyblue"
+                android:layout_marginTop="109dp"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sub_rectangle"
+        android:elevation="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/rel_timetable"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:layout_margin="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecture- 6"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(2:40 AM- 03:30)"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:layout_marginEnd="11dp"
+                android:textSize="20sp"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BCAC 0010/LEC/AB-X/Room-330/Offline"
+                android:textSize="16.5sp"
+                android:textStyle="bold"
+                android:textColor="@color/lecture_grey"
+                android:layout_marginTop="32dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Software Degine And Engineering"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/lecture_grey"
+                android:layout_marginTop="58dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faculty :Appurwa Saxena"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_navyblue"
+                android:layout_marginTop="87dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :Present"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_navyblue"
+                android:layout_marginTop="109dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sub_rectangle"
+        android:elevation="3dp"
+        android:id="@+id/last_lecture"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/rel_timetable"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:layout_margin="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecture- 8"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(04:20 AM- 05:10)"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:layout_marginEnd="11dp"
+                android:textSize="20sp"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BCAC 1011/LEC/AB-X/Room-330/Offline"
+                android:textSize="16.5sp"
+                android:textStyle="bold"
+                android:textColor="@color/lecture_grey"
+                android:layout_marginTop="32dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer Networks And Communication "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/lecture_grey"
+                android:layout_marginTop="58dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faculty :Anuj Mangal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_navyblue"
+                android:layout_marginTop="87dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status :Present"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_navyblue"
+                android:layout_marginTop="109dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/quick_action_rect"
+            android:elevation="15dp"
+            android:layout_margin="15dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/quick_Action"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/lecture_grey"
+
+                    android:text="Quick Actions"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quick_Action"
+                android:layout_marginTop="30dp"
+                android:layout_margin="15dp"
+                android:padding="30dp"
+                >
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="3"
+                    >
+
+
+
+
+                    <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:layout_marginStart="10dp"
+                         android:text="My Profile"
+                        android:textAlignment="center"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:text="My Profile"
+                         android:src="@drawable/ic_circle_notifications_24"
+                         />
+
+
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/naac_banner"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="15dp"
+            />
+
+
+    </LinearLayout>
+</ScrollView>
+
